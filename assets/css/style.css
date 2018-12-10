@@ -1,0 +1,45 @@
+body {
+    background-color: #000;
+    padding-top: 20px;
+    font-family: Verdana, Geneva, 'Tahoma', sans-serif;
+    color: white;
+    background: url('../images/bg3.jpg') no-repeat;
+    background-size: cover;
+    
+}
+.container { 
+    text-align: center;
+    
+}
+h1,h2,h3,
+h4,h5,h6 {
+    padding: 5px;
+}
+#titleImg, #gameOver, #youWin{ 
+    display: block;
+    margin: 0 auto;
+}
+
+#titleImg{
+    width:80%;
+}
+
+#currentWord {
+    letter-spacing: 10px;
+}
+
+#pressKeyTryAgain, 
+#gameOver, 
+#youWin { display: none;}
+.contentCol {
+    padding-top: 20px;
+    border: 2px solid #fff;
+    text-align: center;
+    margin-top: 20px;
+    min-height: 500px;
+    background-color: rgba(0, 40, 104, .7);
+}
+
+/* header{
+    background:rgba(255, 255, 255, .5);
+} */
