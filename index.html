@@ -1,10 +1,8 @@
 <!doctype html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Word Guess Game!</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
@@ -19,26 +17,26 @@
         <img id="titleImg" src="assets/images/TBLheadertitle5.png" alt="Hangman Title Image" />
             </div>
         </header>
-        <div class="container gameContent">
+        <div class="container gameContent"> <!--Holds all content of both columns in a container with the class gameContent-->
         <div class="row">
 
-            <div class="col-md-6 contentCol">
+            <div class="col-md-6 contentCol"> <!--holds all content in the first/left column-->
                 <h2>Press Any Key to Get Started!</h2>
                 <h4>Wins</h4>
-                <h5 id="totalWins"></h5>
+                <h5 id="winsTotal"></h5><!--will display total wins of all rounds-->
                 <h4>Current Word</h4>
-                <h3 id="currentWord"></h3>
+                <h3 id="activeWord"></h3><!--displays the active word in the wordOptions array-->
                 <h4>Guesses Remaining</h4>
-                <h6 id="remainingGuesses"></h6>
-                <h4>Letters Guessed</h4>
-                <h3 id="guessedLetters"></h3>
+                <h6 id="guessesRemaining"></h6><!--displays # of guesses remaining-->
+                <h4>Letters Already Guessed</h4>
+                <h3 id="lettersGuessed"></h3><!--will display all the letters the user has guessed in current round. Put letters in an array?-->
             </div>
 
-            <div class="col-md-6 contentCol">
-                <img id="youWin" src="assets/images/youwin.png" alt="Winning Image" />
-                <img id="gameOver" src="assets/images/gameover.png" alt="Game Over Image" />
+            <div class="col-md-6 contentCol"><!--holds all content in the second/right column-->
+                <img id="youWin" src="assets/images/youwin.png" alt="Winning Image" /> <!---brainstorm, bring up a picture of the player when guessed right-->
+                <img id="gameOver" src="assets/images/gameover.png" alt="Game Over Image" /><!---Game over graphic-->
                 <h2 id="pressKeyTryAgain">Press Any Key to Try Again!</h2>
-                <img id="hangmanImage" src="" alt="" />
+                <img id="hangmanImage" src="" alt="" /><!---img that changes when the user guesses wrong-->
             </div>
         </div>
     </div>
