@@ -35,9 +35,6 @@ var players = [{
 }
 ]
 
-
-// hintElement.innerHTML = "<img src='"+wordOptions["point"]+"'>";
-
 // Create variables that hold references to the places in the HTML where we want to display things.
 var winsTotalText = document.getElementById("winsTotal");
 var activeWordText = document.getElementById("activeWord");
@@ -49,21 +46,23 @@ var youLoseText = document.getElementById("youLose");
 var youWinText = document.getElementById("youWin");
 var directionsTextElement = document.getElementById("directionsText");
 
-// max number of guesses
-var TotalGuesses = 10;
+
+//number of wins
+var wins;
 
 // Each letter the player guesses/userGuess is pushed into this array
 var lettersGuessed = [];
 
-// number of guesses remainingd
-var guessesRemaining = [];
+// number of guesses remaining
+var guessesRemaining;
 
 // Array that holds the letters of the activeWord
 var emptyWordArray = [];
 
-// active word in wordOptions array
+// active word index of players array- number
 var activeWordIndex = [Math.floor(Math.random() * players.length)];
 
+// active word name/string based on the current index of players array
 var activeWord = players[activeWordIndex].name;
 
 //Array of all acceptable key strokes (ie only lowercase letters)
@@ -72,11 +71,16 @@ var activeWord = players[activeWordIndex].name;
 var gamePlay = {
 
     startGame: function(){
+        wins = 0;
+        guessesRemaining = 10;
+        TotalGuesses = 10;
         gamePlay.createEmptySpaces();
         gamePlay.displayHint();
         youLoseText.style.display = 'none';
         youWinText.style.display = 'none';
         tryAgainText.style.display = 'none';
+        winsTotalText.textContent = wins;
+        guessesRemainingText.textContent = guessesRemaining;
     },
 
 
@@ -86,9 +90,9 @@ var gamePlay = {
             activeWordText.textContent = emptyWordArray.join(' ');
         }
 
-        console.log(emptyWordArray);
+        console.log("Current word array: " + emptyWordArray);
 
-        console.log(activeWord);
+        console.log("Current word: " + activeWord);
 
     },
 
@@ -97,6 +101,18 @@ var gamePlay = {
         // for (var i = 0; i < players.length; i++) {
             hintElement.innerHTML = '<img src="assets/images/' + players[activeWordIndex].image + '.jpg">';
         // }
+    },
+
+
+    replaceEmptyWord: function() {
+        for (var i = 0; i < activeWord.length; i++) {
+            if (activeWord[i] === userGuess) {
+                emptyWordArray[i] = userGuess;
+                activeWordText.textContent = emptyWordArray.join(' ');
+                //lettersRemaining--;
+            }
+    
+        }
     },
 
 
@@ -121,8 +137,9 @@ document.onkeyup = function (event) {
     directionsTextElement.style.display = 'none';
     
 
-
+    letterGuessed = String.fromCharCode(event.which).toLowerCase();
     lettersGuessedText.textContent = userGuess;
+    gamePlay.replaceEmptyWord();
 
     // for (var i = 0; i < activeWord.length; i++) {
     //     if (activeWord[i] === userGuess) {
