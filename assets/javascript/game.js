@@ -117,7 +117,9 @@ document.onkeyup = function (event) {
     var userGuess = event.key;
 
     // Hide the directions
-    directionsTextElement.textContent = "";
+    // directionsTextElement.textContent = "";
+    directionsTextElement.style.display = 'none';
+    
 
 
     lettersGuessedText.textContent = userGuess;

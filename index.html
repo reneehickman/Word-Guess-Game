@@ -6,7 +6,7 @@
     <title>Word Guess Game!</title>
     <!-- <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" /> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Work+Sans" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sintony" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 
@@ -27,14 +27,22 @@
             <div class="col-lg-6 contentCol game"> <!--holds all content in the first/left column-->
                 <!-- <div id="directionsText"><h2>Press Any Key to Get Started!</h2></div> -->
                 <div id="progressBar" class="row">
-                    <div id="winsTitle" class="col-xs-6">Wins: 8<span id="winsTotal"></span></div>
-                    <div id="guessesRemainingTitle" class="col">Guesses Remaining: 10<span id="guessesRemaining"></span></div>
+                    <div id="winsTitle" class="col-xs-6">
+                        <div id="winsTotalContain">Wins: <span id="winsTotal"></span></div>
+                    </div>
+                    <div id="guessesRemainingTitle" class="col">
+                            <div id="guessesRemainingContain">Guesses Remaining: <span id="guessesRemaining"></span></div>
+                    </div>
                 </div>
 
 
                 <div id="activeWordContain" class="row">
-                <div class="col"><h2 id="guessThePlayer">Guess the player!</h2>
-                <h2 id="activeWord"></h2></div><!--displays the active word in the wordOptions array-->
+                <div class="col">
+                    <div id="activeWordDiv">
+                    <h2 id="guessThePlayer">Guess the player!</h2>
+                    <h2 id="activeWord"></h2>
+                    </div>
+                </div><!--displays the active word in the wordOptions array-->
                 </div>
                 <div id="lettersGuessedContain" class="row">
                     <div class="col pl-0"><div id="lettersGuessedTitle">Letters Guessed: <span id="lettersGuessed"></span></div>
@@ -43,10 +51,11 @@
             </div>
 
             <div class="col-lg-6 contentCol hint"><!--holds all content in the second/right column-->
+                <div id="hangmanImg"></div><!---img that changes when the user guesses wrong-->
                 <h2 id="youWin">You Win!</h2> 
                 <h2 id="youLose">You Lose!</h2><!---brainstorm, bring up a picture of the player when guessed right-->
                 <h2 id="tryAgain">Try Again!</h2>
-                <div id="hangmanImg"></div><!---img that changes when the user guesses wrong-->
+                
             </div>
         </div>
     </div>

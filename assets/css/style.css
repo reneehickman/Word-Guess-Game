@@ -10,7 +10,7 @@ html {
 body {
     background-color: #000;
     padding-top: 0px;
-    font-family: 'Work Sans', sans-serif;
+    font-family: 'Sintony', Arial, sans-serif;
     color: white;
     background: url('../images/bg3.jpg') no-repeat;
     background-size: cover;
@@ -20,24 +20,23 @@ body {
     
 }
 
+
 #hangmanImg img{
     width:100%;
+    border:2px solid #fff;
 }
 
-/* h1,h2,h3,
-h4,h5,h6 {
-    padding: 5px;
-} */
 
-#titleImg, #gameOver, #youWin{ 
-    display: block;
-    margin: 0 auto;
-}
 
 #titleImg{
     width:80%;
     padding:5px 0px;
 }
+
+.imgWrap, #titleImg{
+    margin:0px auto;
+    text-align:center;
+ }
 
 
 .contentCol {
@@ -79,12 +78,12 @@ h4,h5,h6 {
     padding-left:0px;
     padding-right:0px;
     display:inline-block;
-    min-height:350px;
+    min-height:100%;
 }
 
 #lettersGuessedContain{
     background:rgba(0, 40, 104, .5);
-    padding:15px;
+    padding: 25px 0px 0px 15px;
     color:#fff;
     vertical-align:bottom;
     margin:0px;
@@ -92,15 +91,13 @@ h4,h5,h6 {
     bottom:0px;
     left:0px;
     width:100%;
-    padding-top: 0px;
     border-top: 1px solid #fff;
-    font-size:1.3em;
+    font-size: 1.3em;
+    height: 4em;
 }
 
 #lettersGuessedTitle{
     font-weight:bold;
-    text-align:left;
-    padding-top:15px;
 }
 
 #activeWordContain{
@@ -108,7 +105,12 @@ h4,h5,h6 {
     margin: 0px auto;
     width: 100%;
     vertical-align: middle;
-    padding-top: 8%;
+}
+
+#activeWordDiv{
+    height:10em;
+    margin-bottom:8em;
+    padding-top: 2em;
 }
 
 
@@ -116,7 +118,7 @@ h4,h5,h6 {
 #guessesRemainingTitle{
     float:left;
     font-weight:bold;
-    font-size:1.3em;
+    font-size:1.2em;
     text-align:right;
     padding-right:0px;
     }
@@ -124,7 +126,7 @@ h4,h5,h6 {
     #winsTitle{
     float:right;
     font-weight:bold;
-    font-size:1.3em;
+    font-size:1.2em;
     }
 
 
@@ -148,9 +150,7 @@ h4,h5,h6 {
     padding-top:20px;
 }
 
-#guessThePlayer{
-font-weight:bold;
-}
+#guessThePlayer{font-weight:bold;padding-bottom:10px;font-size: 2.2em;}
 
 #directionsText{
     text-align:center; 
@@ -159,19 +159,44 @@ font-weight:bold;
     color:#002868;
     padding:10px;
     width:100%;
-    /* border-top:2px solid #fff;
-    border-left:2px solid #fff;
-    border-right:2px solid #fff; */
     font-weight:bold;
     font-size:2em;
-    margin-top:10px;
+    /* margin-top:10px; */
+    border:2px solid #fff;
+    border-bottom:0px;
 }
 
 #youWin, #youLose, #tryAgain{
     text-align:center;
     font-weight:bold;
+    background:#fff;
+    color:#002868;
+    margin-top: 15px;
+    padding:7px 0px;
+    border-radius:4px;
+    width:fit-content;
+    border:1px solid #002868;
+    width:100%;
+    font-size:1.8em;
+    margin-bottom:0px;
 }
 
+#guessesRemaining, #winsTotal, #lettersGuessed{
+    font-weight:normal;
+}
+
+#guessesRemainingContain, #winsTotalContain{
+    background:#fff;
+    color:#002868;
+    padding:3px 7px;
+    border-radius:4px;
+    width:fit-content;
+    border:1px solid #002868;
+}
+
+#guessesRemainingContain{
+    float:right;
+}
 
 
 
@@ -180,17 +205,14 @@ font-weight:bold;
             width:100%;
         }
         #directionsText{
-            font-size:1.7em;
+            font-size:1.6em;
         }
 
     }
     
     
-    
-    @media (min-width: 768px) and (max-width: 991.98px) { 
-        #activeWordContain{
-            padding-top:5%;
-        }
+    @media (min-width: 768px){ 
+        
     }
     
     
@@ -205,16 +227,22 @@ font-weight:bold;
           margin-bottom:40px;
     }
 
+    #activeWordDiv{
+            padding-top: 7%;
+        }
+
 }
     
     
-    
+/*     
     @media (min-width: 992px) and (max-width: 1199.98px) { 
 
-    }
+    } */
     
     @media (min-width: 1200px) { 
-       
+        #activeWordDiv{
+            padding-top: 8%;
+        }
     }
     
     
