@@ -1,21 +1,25 @@
 # Word-Guess-Game
 
-### Press a letter and try to guess the word before your number of guesses run out! 
+A hangman style game with a Tampa Bay Lightning twist.
 
-The hangman game is very helpful in better understanding loops and conditionals. Breaking down the game logic into small psuedocode steps is very helpful. Here were my steps below:
+## Tampa Bay Lightning Themed Hangman: How to Play
 
-##### Psuedocoding steps below:
-- The computer picks a random word from the wordoptions array to use as the active/currentWord.
+In this Tampa Bay Lightning themed hangman game, the user will press any letter to start the game. The game randomly selects a player from the players array and displays the length of their name as underscores and a corresponding image of the player as a hint. If a correct letter is guessed, the game will replace the underscore in the correct location of the players name. If a user chooses a letter not found in the players name, that letter will be added to the list of Wrong Letters Guessed. The amount of guesses a user has for each player's name is dependent on the length of the player's name. If the user doesn't guess the player's name in the specified number of guesses, the game resets and picks a new player to display. If the user guesses the player's name correctly, the user's wins increase by 1 and the game resets and picks a new player to display.
 
-- while the word has not been guessed the player will be able to see their current progress while the computer waits for a key input from the player. 
+https://reneehickman.github.io/Word-Guess-Game/
 
-- Check that the player’s guess is a valid letter in the active/current word and if true, push that letter into the empty/underscore array.
+![ScreenShot](/assets/images/screenshot2.PNG)
 
-- We can keep track of the different letters the player has guessed by pushing each valid keypress into the empty lettersGuessed array.
+### Languages/Libraries/Technology used:
+- HTML5
+- CSS
+- JavaScript
+- Bootstrap Framework
+- Photoshop
+- Illustrator
 
-- Reset game and start a new round when the player has guessed the word or runs out of guesses. 
 
-- Wins and losses increase depending on whether the player guesses each letter of the active word in the set number of guesses.
+
 
 
 

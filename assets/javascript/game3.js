@@ -237,7 +237,11 @@ restartGame: function() {
     }
     // If win is false, return false to the updatePage function. The game goes on!
     return false;
-  }
+  },
+
+ isAlpha: function(ch){
+    return /^[A-Z]$/i.test(ch);
+}
 };
 
 // Initialize the game when the page loads.
@@ -245,12 +249,19 @@ gamePlay.setupGame();
 
 // When a key is pressed..
 document.onkeyup = function(event) {
+  if (event.keyCode >= 65 && event.keyCode <= 90) {
+
 
 document.querySelector("#directionsText").style.display = 'none';
   // Capture pressed key and make it lowercase.
+ 
   gamePlay.letterGuessed = String.fromCharCode(event.which).toLowerCase();
+}
+
   // Pass the guessed letter into our updatePage function to run the game logic.
   gamePlay.updatePage(gamePlay.letterGuessed);
+  
+
 };
 
 
