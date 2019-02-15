@@ -8,7 +8,7 @@ In this Tampa Bay Lightning themed hangman game, the user will press any letter 
 
 https://reneehickman.github.io/Word-Guess-Game/
 
-![ScreenShot](/assets/images/screenshot2.PNG)
+![ScreenShot](/assets/images/screenshot2.png)
 
 ### Languages/Libraries/Technology used:
 - HTML5
